@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/src/video/(.*)",
+      "headers": {
+        "Content-Type": "video/mp4"
+      },
+      "dest": "/src/video/$1"
+    },
+    {
+      "src": "/src/images/(.*)",
+      "dest": "/src/images/$1"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "/$1"
+    }
+  ]
+} 
