@@ -197,30 +197,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 音量控制按钮功能
-            const videoElements = document.querySelectorAll('video');
-            const volumeButton = document.querySelector('.fa-volume-mute').parentElement;
-            let isMuted = true;
-
-            volumeButton.addEventListener('click', function() {
-                isMuted = !isMuted;
-                videoElements.forEach(video => {
-                    video.muted = isMuted;
-                });
-                
-                // 更新图标
-                const icon = this.querySelector('i');
-                icon.classList.toggle('fa-volume-mute');
-                icon.classList.toggle('fa-volume-up');
-            });
-
-            // 初始设置视频为静音
-            videoElements.forEach(video => {
-                video.muted = true;
-            });
-        });
-    </script>
+    <script src="/src/js/main.js"></script>
 </body>
 </html>

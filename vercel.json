@@ -17,7 +17,8 @@
     {
       "src": "/src/video/(.*)",
       "headers": {
-        "Content-Type": "video/mp4"
+        "Content-Type": "video/mp4",
+        "Cache-Control": "public, max-age=31536000, immutable"
       },
       "dest": "/src/video/$1"
     },
